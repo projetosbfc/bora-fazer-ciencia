@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bora Fazer Ciência - EQ/UFRJ</title>
+    <!-- Google Fonts: Kalam & IBM Plex Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Folha de Estilo -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Menu de Navegação Superior (Navbar Fixa) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-brand">
+                <img src="assets/logo-bfc.png" alt="Logo BFC" class="nav-logo-bfc">
+                <div class="brand-titles">
+                    <span class="brand-text">BORA FAZER <span class="highlight">CIÊNCIA</span></span>
+                    <span class="brand-sub">EQ / UFRJ</span>
+                </div>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#objetivos">Objetivos</a></li>
+                <li><a href="#acoes">Ações</a></li>
+                <li><a href="#materiais">Materiais</a></li>
+                <li><a href="#contato" class="btn-nav">Fale Conosco</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section / Apresentação -->
+    <header class="hero">
+        <div class="hero-container">
+            <div class="hero-text-content">
+                <div class="hero-partner-logos">
+                    <img src="assets/logo-eq-ufrj.png" alt="Escola de Química UFRJ" class="hero-logo-eq">
+                </div>
+
+                <div class="badge-ufrj">
+                    <i class="fa-solid fa-graduation-cap"></i> Escola de Química — UFRJ
+                </div>
+                
+                <h1 class="hero-title">Popularizando a ciência com impacto e inovação.</h1>
+                <p class="hero-subtitle">
+                    Um projeto de extensão universitária dedicado à divulgação, promoção e defesa da ciência brasileira.
+                </p>
+                
+                <div class="hero-btns">
+                    <a href="#sobre" class="btn-primary">Conheça o Projeto</a>
+                    <a href="#materiais" class="btn-secondary">Acesse Nossos Materiais</a>
+                </div>
+            </div>
+
+            <div class="hero-media">
+                <div class="hero-img-wrapper">
+                    <img src="assets/foto-equipe.jpg" alt="Equipe Bora Fazer Ciência">
+                    
+                    <div class="floating-card flex-card-bfc">
+                        <img src="assets/logo-bfc.png" alt="Logo BFC" class="floating-logo">
+                        <span>Bora Fazer Ciência</span>
+                    </div>
+
+                    <div class="floating-card flex-card-1">
+                        <i class="fa-solid fa-flask-vial"></i>
+                        <span>Extensão & Pesquisa</span>
+                    </div>
+                    
+                    <div class="floating-card flex-card-2">
+                        <i class="fa-solid fa-bullhorn"></i>
+                        <span>Divulgação científica para todos os públicos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção Sobre o BFC -->
+    <section id="sobre" class="section-padding about-section">
+        <div class="container">
+            <div class="section-header header-with-logo">
+                <div>
+                    <span class="subtitle">Quem Somos</span>
+                    <h2><i class="fa-solid fa-circle-info"></i> Sobre o BFC</h2>
+                </div>
+                <img src="assets/logo-bfc-letras.png" alt="BFC Ilustrado" class="title-logo-bfc">
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card highlight-card">
+                    <i class="fa-solid fa-atom card-icon"></i>
+                    <h3>Nossa História</h3>
+                    <p>Criado em 2019 por um grupo de pós-graduandos da COPPE a partir das reflexões geradas do Colóquio de Engenharia Química sobre Ciência e Sociedade, o BFC iniciou suas atividades como um projeto autônomo de extensão voltado para a divulgação, promoção, popularização e defesa da ciência brasileira, especialmente desenvolvida na UFRJ.</p>
+                </div>
+
+                <div class="about-card highlight-card">
+                    <i class="fa-solid fa-people-roof card-icon"></i>
+                    <h3>Integração com a EQ</h3>
+                    <p>Em 2025, o BFC passou a integrar as ações de extensão da Escola de Química, sob coordenação do Prof. Dr. Daniel Tinôco, sendo rebatizado como <strong>Bora Fazer Ciência EQ UFRJ</strong>. O BFC - EQ/UFRJ é formado por alunos de graduação e pós-graduação que veem na extensão o caminho para retornar à sociedade todo o investimento público realizado em sua formação durante os anos vividos na UFRJ.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Equipe -->
+    <section id="equipe" class="section-padding team-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="subtitle">Liderança & Coordenação</span>
+                <h2><i class="fa-solid fa-users"></i> Nossos Coordenadores</h2>
+                <p>Conheça quem faz a ciência acontecer na prática!</p>
+            </div>
+
+            <div class="team-grid">
+                <!-- Member 1: Daniel -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="assets/daniel.jpg" alt="Dr. Daniel Tinôco">
+                    </div>
+                    <div class="team-content">
+                        <span class="role-badge">Orientador</span>
+                        <h3>Dr. Daniel Tinôco</h3>
+                        <p class="role-desc"><i class="fa-solid fa-user-graduate icon-role"></i> Coordenador e Orientador</p>
+                        <a href="http://lattes.cnpq.br/0914562459197181" target="_blank" rel="noopener noreferrer" class="lattes-link">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Currículo Lattes
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Member 2: Laura -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="assets/laura.jpg" alt="Laura Alves">
+                    </div>
+                    <div class="team-content">
+                        <span class="role-badge">Diretoria</span>
+                        <h3>Laura Alves</h3>
+                        <p class="role-desc"><i class="fa-solid fa-diagram-project icon-role"></i> Diretora - Projetos</p>
+                        <a href="http://lattes.cnpq.br/9576321317073336" target="_blank" rel="noopener noreferrer" class="lattes-link">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Currículo Lattes
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Member 3: Yasmin -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="assets/yasmin.jpg" alt="Yasmin Gonçalves">
+                    </div>
+                    <div class="team-content">
+                        <span class="role-badge">Diretoria</span>
+                        <h3>Yasmin Lourenço</h3>
+                        <p class="role-desc"><i class="fa-solid fa-comments icon-role"></i> Diretora - Comunicação</p>
+                        <a href="http://lattes.cnpq.br/9576321317073336" target="_blank" rel="noopener noreferrer" class="lattes-link">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Currículo Lattes
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Member 4: Matheus -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="assets/matheus.jpg" alt="Matheus Joel">
+                    </div>
+                    <div class="team-content">
+                        <span class="role-badge">Diretoria</span>
+                        <h3>Matheus Joel</h3>
+                        <p class="role-desc"><i class="fa-solid fa-handshake icon-role"></i> Diretor - Relações</p>
+                        <a href="http://lattes.cnpq.br/4659252658094803" target="_blank" rel="noopener noreferrer" class="lattes-link">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Currículo Lattes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Objetivos -->
+    <section id="objetivos" class="section-padding objectives-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Propósito</span>
+                <h2><i class="fa-solid fa-bullseye"></i> Nossos Objetivos</h2>
+                <p>Com o objetivo de se aproximar a academia e a sociedade, o Bora Fazer Ciência (BFC) tem atuado em três frentes principais de trabalho:</p>
+            </div>
+
+            <div class="objectives-grid">
+                <div class="obj-card">
+                    <div class="obj-icon-box">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h3>Ensino & Formação</h3>
+                    <p>Oferta de palestras, minicursos e workshops para escolas públicas e demais institutos de ensino (remota e presencial).</p>
+                </div>
+
+                <div class="obj-card">
+                    <div class="obj-icon-box">
+                        <i class="fa-solid fa-vial-circle-check"></i>
+                    </div>
+                    <h3>Prática Científica</h3>
+                    <p>Desenvolvimento de experimentos científicos de baixo custo, de áreas diversas, alinhados ao interesse e realidade socioeconômica do público.</p>
+                </div>
+
+                <div class="obj-card">
+                    <div class="obj-icon-box">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h3>Divulgação & Mídia</h3>
+                    <p>Comunicação científica nas redes sociais (Instagram e canal no YouTube), por meio de posts, vídeos informativos, divulgação de materiais e podcasts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Nossas Ações -->
+    <section id="acoes" class="section-padding actions-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="subtitle font-white">Atividades & Eventos</span>
+                <h2 class="font-white"><i class="fa-solid fa-bolt"></i> Nossas Ações</h2>
+            </div>
+
+            <div class="actions-grid">
+                <div class="action-card">
+                    <div class="action-badge"><i class="fa-solid fa-microscope"></i> Escola de Química</div>
+                    <h3>Conhecendo a EQ</h3>
+                    <p>Evento na Escola de Química/UFRJ, nas versões calouros e kids, com o objetivo de apresentar o espaço universitário ao público.</p>
+                </div>
+
+                <div class="action-card">
+                    <div class="action-badge"><i class="fa-solid fa-tree"></i> Parceria Casa da Ciência</div>
+                    <h3>Oficina de Férias</h3>
+                    <p>Evento realizado em parceria com a Casa da Ciência da UFRJ, em que propomos oficinas de tema ambiental para crianças de 4-12 anos.</p>
+                </div>
+
+                <div class="action-card">
+                    <div class="action-badge"><i class="fa-solid fa-atom"></i> Nacional</div>
+                    <h3>Semana Nacional de Ciência e Tecnologia</h3>
+                    <p>Evento para público externo, com atividades interativas, jogos e experimentos diversos.</p>
+                </div>
+
+                <div class="action-card">
+                    <div class="action-badge"><i class="fa-solid fa-vial"></i> Interativo</div>
+                    <h3>Semana da Escola de Química</h3>
+                    <p>Participação na Tenda Engenhosa e no EQ POP, atendendo alunos de nível médio, realizando experimentos e jogos.</p>
+                </div>
+
+                <div class="action-card full-width">
+                    <div class="action-badge"><i class="fa-solid fa-child-reaching"></i> Inclusão & Parceria</div>
+                    <h3>Dia das Crianças</h3>
+                    <p>Evento para os alunos com altas habilidades do Instituto Sabendo Mais em parceria com as iniciativas Alimentec, For_Code e EDS Maker.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Materiais -->
+    <section id="materiais" class="section-padding materials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Recursos Gratuitos</span>
+                <h2><i class="fa-solid fa-folder-open"></i> Acesse Nossos Materiais</h2>
+            </div>
+
+            <div class="materials-wrapper">
+                <div class="material-card">
+                    <div class="material-num">01</div>
+                    <div class="material-info">
+                        <h3><i class="fa-solid fa-file-lines title-icon"></i> Relatórios Científicos</h3>
+                        <p>Produzimos relatórios científicos das atividades que propomos.</p>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/16C2nkaXFGBEprwel6g2nGbN5luWHcCJn?usp=drive_link" class="material-btn" target="_blank" rel="noopener noreferrer">
+                        Acessar no Drive <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="material-card">
+                    <div class="material-num">02</div>
+                    <div class="material-info">
+                        <h3><i class="fa-solid fa-book-open-reader title-icon"></i> Cartilhas Científicas</h3>
+                        <p>Produzimos Cartilhas Científicas voltadas para a popularização e exposição da realização de experimentos de maneira acessível.</p>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1pfdivqF9ShrLpiGtULjrCUV-C4IYubV0?usp=drive_link" class="material-btn" target="_blank" rel="noopener noreferrer">
+                        Acessar no Drive <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="material-card">
+                    <div class="material-num">03</div>
+                    <div class="material-info">
+                        <h3><i class="fa-solid fa-gamepad title-icon"></i> Recursos Interativos</h3>
+                        <p>Para consolidar o exposto nos Roteiros e Cartilhas, produzimos materiais interativos e didáticos sobre as atividades e conceitos científicos.</p>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/19Eng3SlcKE6WDtepLfRa2MZf9mf55lLx?usp=drive_link" class="material-btn" target="_blank" rel="noopener noreferrer">
+                        Acessar no Drive <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner CTA -->
+    <section class="cta-banner">
+        <div class="cta-container">
+            <h2>Bora Fazer Ciência?</h2>
+            <p>Junte-se a nós na missão de levar o conhecimento para além dos muros da universidade.</p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contato" class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-info">
+                    <div class="footer-logos">
+                        <img src="assets/logo-bfc.png" alt="Logo BFC" class="footer-logo-bfc">
+                        <img src="assets/logo-eq-ufrj.png" alt="Logo EQ UFRJ" class="footer-logo-eq">
+                    </div>
+                    <h3>Bora Fazer Ciência — EQ/UFRJ</h3>
+                    <p>Para conhecer mais o projeto, acompanhar nossas ações e ficar sabendo das novidades, nos acompanhe nas redes!</p>
+                </div>
+
+                <div class="footer-socials">
+                    <a href="mailto:borafazerciencia@eq.ufrj.br" class="social-box">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>borafazerciencia@eq.ufrj.br</span>
+                    </a>
+                    <a href="https://www.youtube.com/@borafazerciencia/featured" target="_blank" rel="noopener noreferrer" class="social-box">
+                        <i class="fa-brands fa-youtube"></i>
+                        <span>Bora Fazer Ciência</span>
+                    </a>
+                    <a href="https://instagram.com/borafazerciencia" target="_blank" rel="noopener noreferrer" class="social-box">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>@borafazerciencia</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; Bora Fazer Ciência, 2026. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
