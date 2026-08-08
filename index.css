@@ -296,9 +296,16 @@ h3 { font-size: 1.8rem; }
     color: var(--orange-primary);
 }
 
-.flex-card-bfc { top: -25px; right: 20px; }
+.flex-card-bfc { top: -25px; left: 20px; }
 .flex-card-1 { bottom: 20px; left: -25px; }
-.flex-card-2 { bottom: -25px; right: -10px; max-width: 250px; }
+
+/* Ajustado: Card "Conexão com ODS" fixado no topo superior direito */
+.flex-card-2 { 
+    top: -25px; 
+    bottom: auto;
+    right: -10px; 
+    max-width: 250px; 
+}
 
 /* ==========================================================================
    SEÇÕES GERAIS
@@ -443,8 +450,8 @@ h3 { font-size: 1.8rem; }
 /* OBJETIVOS */
 .objectives-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
 }
 
 .obj-card {
@@ -531,6 +538,123 @@ h3 { font-size: 1.8rem; }
     margin-bottom: 10px;
 }
 
+/* ==========================================================================
+   PRODUÇÕES / E-BOOK
+   ========================================================================== */
+.ebook-showcase-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+    align-items: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    border-left: 6px solid var(--orange-primary);
+}
+
+.ebook-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.ebook-img-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.ebook-img-wrapper img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+    display: block;
+    object-fit: cover;
+}
+
+.ebook-badge-float {
+    bottom: -15px;
+    right: -10px;
+    padding: 8px 14px;
+    font-size: 0.8rem;
+}
+
+.isbn-badge {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    background: var(--bg-light);
+    padding: 6px 14px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.isbn-badge i {
+    color: var(--navy-blue);
+}
+
+.ebook-tag {
+    display: inline-block;
+    background-color: var(--orange-light);
+    color: var(--navy-dark);
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+}
+
+.ebook-title {
+    color: var(--navy-blue);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.ebook-description {
+    color: var(--text-dark);
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.ebook-highlights {
+    list-style: none;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ebook-highlights li {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.ebook-highlights li i {
+    color: var(--orange-primary);
+    font-size: 1.1rem;
+    margin-top: 3px;
+}
+
+.ebook-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.ebook-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.1rem;
+    padding: 10px 22px;
+}
+
 /* MATERIAIS */
 .materials-wrapper {
     display: flex;
@@ -563,17 +687,28 @@ h3 { font-size: 1.8rem; }
     text-align: center;
 }
 
+.material-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Ajustado: alinhamento contínuo para os títulos e ícones dos experimentos */
 .material-info h3 {
     color: var(--navy-blue);
     margin-bottom: 6px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-start;
 }
 
 .material-info p {
     color: var(--text-muted);
     font-size: 0.95rem;
     line-height: 1.4;
+    margin: 0;
 }
 
 .material-btn {
@@ -593,6 +728,38 @@ h3 { font-size: 1.8rem; }
 
 .material-btn:hover {
     background-color: var(--orange-primary);
+}
+
+/* ==========================================================================
+   SUBMISSÕES E APRESENTAÇÕES
+   ========================================================================== */
+#submissoes .action-card {
+    display: flex;
+    flex-direction: column;
+}
+
+#submissoes .ebook-highlights {
+    margin-bottom: 0;
+}
+
+#submissoes .ebook-highlights li {
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.4;
+}
+
+#submissoes .exp-title {
+    font-weight: 700;
+    color: var(--orange-light);
+}
+
+#submissoes .exp-desc {
+    color: var(--white);
+}
+
+#submissoes .ebook-highlights li i {
+    color: var(--orange-primary);
+    margin-top: 2px;
 }
 
 /* BANNER CTA */
@@ -696,7 +863,7 @@ h3 { font-size: 1.8rem; }
 
 /* RESPONSIVIDADE */
 @media (max-width: 900px) {
-    .hero-container, .about-grid, .actions-grid {
+    .hero-container, .about-grid, .actions-grid, .ebook-showcase-card {
         grid-template-columns: 1fr;
     }
 
@@ -724,5 +891,14 @@ h3 { font-size: 1.8rem; }
 
     .nav-links {
         display: none;
+    }
+
+    .ebook-showcase-card {
+        padding: 25px;
+    }
+
+    .ebook-media {
+        max-width: 280px;
+        margin: 0 auto;
     }
 }
