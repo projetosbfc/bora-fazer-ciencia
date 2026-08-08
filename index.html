@@ -12,6 +12,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Folha de Estilo -->
     <link rel="stylesheet" href="index.css">
+
+    <!-- Regras CSS de correção para os problemas apontados -->
+    <style>
+        /* CORREÇÃO 1: Botão Fale Conosco sem quebras/cortes */
+        .navbar .btn-nav {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap; /* Impede a quebra de linha de Fale Conosco */
+            padding: 8px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            line-height: 1.2;
+            height: auto;
+        }
+
+        /* CORREÇÃO 2: Alinhamento e espaçamento fluido das listas do E-book e das Submissões */
+        .ebook-highlights {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .ebook-highlights li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px; /* Espaço pequeno e natural entre os elementos */
+            text-align: left;
+            line-height: 1.4;
+        }
+
+        /* Ícone fixo no início */
+        .ebook-highlights li i {
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        /* Título e descrição em fluxo contínuo e alinhados */
+        .ebook-highlights .exp-title {
+            font-weight: 700;
+            margin-right: 4px;
+            white-space: normal;
+        }
+
+        .ebook-highlights .exp-desc {
+            font-weight: 400;
+            display: inline;
+        }
+    </style>
 </head>
 <body>
 
@@ -31,7 +83,9 @@
                 <li><a href="#equipe">Equipe</a></li>
                 <li><a href="#objetivos">Objetivos</a></li>
                 <li><a href="#acoes">Ações</a></li>
+                <li><a href="#producoes">Produções</a></li>
                 <li><a href="#materiais">Materiais</a></li>
+                <li><a href="#submissoes">Submissões</a></li>
                 <li><a href="#contato" class="btn-nav">Fale Conosco</a></li>
             </ul>
         </div>
@@ -153,7 +207,7 @@
                 <!-- Member 3: Yasmin -->
                 <div class="team-card">
                     <div class="team-img-wrapper">
-                        <img src="assets/yasmin.JPG" alt="Yasmin Gonçalves">
+                        <img src="assets/yasmin.JPG" alt="Yasmin Lourenço">
                     </div>
                     <div class="team-content">
                         <span class="role-badge">Diretoria</span>
@@ -189,7 +243,7 @@
             <div class="section-header">
                 <span class="subtitle">Propósito</span>
                 <h2><i class="fa-solid fa-bullseye"></i> Nossos Objetivos</h2>
-                <p>Com o objetivo de aproximar a academia e a sociedade, o Bora Fazer Ciência (BFC) tem atuado em três frentes principais de trabalho:</p>
+                <p>Com o objetivo de aproximar a academia e a sociedade, o Bora Fazer Ciência (BFC) tem atuado em frentes estratégicas de trabalho:</p>
             </div>
 
             <div class="objectives-grid">
@@ -211,10 +265,18 @@
 
                 <div class="obj-card">
                     <div class="obj-icon-box">
+                        <i class="fa-solid fa-hand-holding-hand"></i>
+                    </div>
+                    <h3>Tecnologia Social</h3>
+                    <p>Aplicação do saber científico na solução de problemas comunitários reais, como o projeto de composteiras de baixo custo e capacitação em processos fermentativos para geração de renda.</p>
+                </div>
+
+                <div class="obj-card">
+                    <div class="obj-icon-box">
                         <i class="fa-solid fa-bullhorn"></i>
                     </div>
                     <h3>Divulgação & Mídia</h3>
-                    <p>Comunicação científica nas redes sociais (Instagram e canal no YouTube), por meio de posts, vídeos informativos, divulgação de materiais e podcasts.</p>
+                    <p>Comunicação científica nas redes sociais (Instagram, YouTube e TikTok), por meio de posts, vídeos informativos, divulgação de materiais e podcasts.</p>
                 </div>
             </div>
         </div>
@@ -262,6 +324,125 @@
         </div>
     </section>
 
+    <!-- Seção Nossas Produções (E-book) -->
+    <section id="producoes" class="section-padding productions-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">Publicações BFC</span>
+                <h2><i class="fa-solid fa-book-bookmark"></i> Nossas Produções</h2>
+            </div>
+
+            <div class="ebook-showcase-card">
+                <div class="ebook-media">
+                    <div class="ebook-img-wrapper">
+                        <img src="assets/ebook.jpg" alt="Capa E-book Ciência na Prática">
+                        
+                        <!-- Card ODS sobreposto no TOPO da capa -->
+                        <div class="floating-card ebook-badge-float">
+                            <i class="fa-solid fa-earth-americas"></i>
+                            <span>Conexão com ODS</span>
+                        </div>
+                    </div>
+                    <div class="isbn-badge">
+                        <i class="fa-solid fa-barcode"></i> ISBN: <span>978-65-00-00000-0</span>
+                    </div>
+                </div>
+
+                <div class="ebook-info">
+                    <span class="ebook-tag"><i class="fa-solid fa-book-open"></i> E-book Oficial</span>
+                    <h3 class="ebook-title">Ciência na Prática: Guia de Experimentos de Baixo Custo para Educação Científica</h3>
+                    
+                    <p class="ebook-description">
+                        Este guia prático foi cuidadosamente elaborado para democratizar o ensino da ciência de forma acessível, segura e estimulante. O livro apresenta experimentos interativos desenvolvidos com materiais do cotidiano — perfeitos para serem realizados em sala de aula ou em casa:
+                    </p>
+
+                    <!-- Lista de Experimentos Estruturada sem Espaços Grandes -->
+                    <ul class="ebook-highlights">
+                        <li>
+                            <i class="fa-solid fa-dna"></i>
+                            <div>
+                                <span class="exp-title">Extração do DNA:</span>
+                                <span class="exp-desc">Desvendando o código genético de forma prática.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-droplet"></i>
+                            <div>
+                                <span class="exp-title">Leite Psicodélico:</span>
+                                <span class="exp-desc">Explorando a tensão superficial e a ação de detergentes.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-filter"></i>
+                            <div>
+                                <span class="exp-title">Cromatografia em Papel:</span>
+                                <span class="exp-desc">Separação de pigmentos e análise de misturas.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <div>
+                                <span class="exp-title">Espuma Colorida:</span>
+                                <span class="exp-desc">Reações químicas e liberação de gases.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <div>
+                                <span class="exp-title">Lâmpada de Lava:</span>
+                                <span class="exp-desc">Entendendo densidade e imiscibilidade de líquidos.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-water"></i>
+                            <div>
+                                <span class="exp-title">A Água que o Solo Segura:</span>
+                                <span class="exp-desc">Retenção hídrica, porosidade e importância do solo.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-vial"></i>
+                            <div>
+                                <span class="exp-title">Tanques de Fermentação:</span>
+                                <span class="exp-desc">Ação do fermento + açúcar vs. fermento + sal enchendo a bexiga.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-smog"></i>
+                            <div>
+                                <span class="exp-title">Adsorção de Cores com Carvão:</span>
+                                <span class="exp-desc">Purificação e retenção de moléculas por adsorção.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-hand-fist"></i>
+                            <div>
+                                <span class="exp-title">Fluido Não-Newtoniano:</span>
+                                <span class="exp-desc">Viscosidade e comportamentos de fluidos sob pressão.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-leaf"></i>
+                            <div>
+                                <span class="exp-title">Relação com as ODS:</span>
+                                <span class="exp-desc">Como cada experimento se conecta aos Objetivos de Desenvolvimento Sustentável da ONU.</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="ebook-actions">
+                        <a href="https://drive.google.com/drive/u/0/my-drive" target="_blank" rel="noopener noreferrer" class="btn-primary ebook-btn">
+                            <i class="fa-brands fa-google-drive"></i> Acessar no Drive
+                        </a>
+                        <a href="https://www.amazon.com.br" target="_blank" rel="noopener noreferrer" class="btn-secondary ebook-btn">
+                            <i class="fa-brands fa-amazon"></i> Comprar na Amazon
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Seção Materiais -->
     <section id="materiais" class="section-padding materials-section">
         <div class="container">
@@ -302,6 +483,112 @@
                     <a href="https://drive.google.com/drive/folders/19Eng3SlcKE6WDtepLfRa2MZf9mf55lLx?usp=drive_link" class="material-btn" target="_blank" rel="noopener noreferrer">
                         Acessar no Drive <i class="fa-solid fa-arrow-right"></i>
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Submissões e Apresentações -->
+    <section id="submissoes" class="section-padding actions-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="subtitle font-white">Produção Acadêmica</span>
+                <h2 class="font-white"><i class="fa-solid fa-scroll"></i> Nossas Submissões e Apresentações</h2>
+            </div>
+
+            <div class="actions-grid">
+                <!-- II CRIEU -->
+                <div class="action-card">
+                    <div class="action-badge"><i class="fa-solid fa-award"></i> II CRIEU — 2 Resumos</div>
+                    <h3>II Congresso de Redes de Investigação e Extensão Universitária</h3>
+                    <ul class="ebook-highlights" style="margin-top: 15px;">
+                        <li>
+                            <i class="fa-solid fa-file-lines font-white"></i>
+                            <div>
+                                <span class="exp-title">A Versatilidade da Linguagem em Atividades Científicas:</span>
+                                <span class="exp-desc">Um Estudo Comparativo de Ações Extensionistas do Projeto Bora Fazer Ciência</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-podcast font-white"></i>
+                            <div>
+                                <span class="exp-title">Podcast Científico:</span>
+                                <span class="exp-desc">Ferramenta de divulgação e engajamento.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- VIII SIBPOP -->
+                <div class="action-card">
+                    <div class="action-badge"><i class="fa-solid fa-award"></i> VIII SIBPOP — 2 Resumos</div>
+                    <h3>VIII Simpósio de Biologia e Popularização da Ciência</h3>
+                    <ul class="ebook-highlights" style="margin-top: 15px;">
+                        <li>
+                            <i class="fa-solid fa-laptop-code font-white"></i>
+                            <div>
+                                <span class="exp-title">Da Prática ao Digital:</span>
+                                <span class="exp-desc">Estações de aprendizagem sobre água, solo e resíduos na sensibilização de crianças e internautas</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-share-nodes font-white"></i>
+                            <div>
+                                <span class="exp-title">Sensibilização Digital:</span>
+                                <span class="exp-desc">Estratégias na divulgação científica</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 15ª SIAC -->
+                <div class="action-card full-width">
+                    <div class="action-badge"><i class="fa-solid fa-award"></i> 15ª SIAC — 6 Resumos</div>
+                    <h3>Semana de Integração Acadêmica da UFRJ</h3>
+                    <ul class="ebook-highlights" style="margin-top: 15px;">
+                        <li>
+                            <i class="fa-solid fa-gamepad font-white"></i>
+                            <div>
+                                <span class="exp-title">Circuito de Biologia Molecular:</span>
+                                <span class="exp-desc">Uma estratégia de divulgação científica baseada em jogos lúdicos</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-campground font-white"></i>
+                            <div>
+                                <span class="exp-title">Experiência na Colônia de Férias:</span>
+                                <span class="exp-desc">A atuação do Projeto Bora Fazer Ciência na Casa da Ciência da UFRJ</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-hand-holding-heart font-white"></i>
+                            <div>
+                                <span class="exp-title">Altas Habilidades e Vulnerabilidade:</span>
+                                <span class="exp-desc">Desenvolvimento de atividades científicas para crianças com altas habilidades em contexto de vulnerabilidade social</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-flask font-white"></i>
+                            <div>
+                                <span class="exp-title">Jogos e Experimentos Científicos:</span>
+                                <span class="exp-desc">Ferramentas de promoção da ciência através do Projeto de Extensão Bora Fazer Ciência</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-graduation-cap font-white"></i>
+                            <div>
+                                <span class="exp-title">Recepção de Calouros:</span>
+                                <span class="exp-desc">Integração e divulgação científica na recepção de calouros na Escola de Química da UFRJ</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-podcast font-white"></i>
+                            <div>
+                                <span class="exp-title">Podcast na Divulgação Científica:</span>
+                                <span class="exp-desc">Ampliando o alcance das ações extensionistas</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
