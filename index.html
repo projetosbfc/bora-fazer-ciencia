@@ -13,14 +13,14 @@
     <!-- Folha de Estilo -->
     <link rel="stylesheet" href="index.css">
 
-    <!-- Regras CSS de correção e ajustes do projeto -->
+    <!-- Regras CSS de correção para os problemas apontados -->
     <style>
-        /* Botão Fale Conosco sem quebras/cortes */
+        /* CORREÇÃO 1: Botão Fale Conosco sem quebras/cortes */
         .navbar .btn-nav {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            white-space: nowrap;
+            white-space: nowrap; /* Impede a quebra de linha de Fale Conosco */
             padding: 8px 18px;
             border-radius: 20px;
             text-decoration: none;
@@ -28,7 +28,7 @@
             height: auto;
         }
 
-        /* Alinhamento e espaçamento fluido das listas */
+        /* CORREÇÃO 2: Alinhamento e espaçamento fluido das listas do E-book e das Submissões */
         .ebook-highlights {
             list-style: none;
             padding: 0;
@@ -41,16 +41,18 @@
         .ebook-highlights li {
             display: flex;
             align-items: flex-start;
-            gap: 8px;
+            gap: 8px; /* Espaço pequeno e natural entre os elementos */
             text-align: left;
             line-height: 1.4;
         }
 
+        /* Ícone fixo no início */
         .ebook-highlights li i {
             margin-top: 3px;
             flex-shrink: 0;
         }
 
+        /* Título e descrição em fluxo contínuo e alinhados */
         .ebook-highlights .exp-title {
             font-weight: 700;
             margin-right: 4px;
@@ -60,23 +62,6 @@
         .ebook-highlights .exp-desc {
             font-weight: 400;
             display: inline;
-        }
-
-        /* Ajuste de estilo para a descrição dos cargos nos cards de membros */
-        .member-card .role-desc {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            margin-top: 2px;
-            margin-bottom: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            line-height: 1.2;
-        }
-
-        .member-card .role-desc i {
-            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -100,7 +85,6 @@
                 <li><a href="#acoes">Ações</a></li>
                 <li><a href="#producoes">Produções</a></li>
                 <li><a href="#materiais">Materiais</a></li>
-                <li><a href="#premiacoes">Premiações</a></li>
                 <li><a href="#submissoes">Submissões</a></li>
                 <li><a href="#contato" class="btn-nav">Fale Conosco</a></li>
             </ul>
@@ -209,7 +193,7 @@
                 <!-- Member 2: Laura -->
                 <div class="team-card">
                     <div class="team-img-wrapper">
-                        <img src="assets/laura.jpg" alt="Laura Alves">
+                        <img src="assets/laura.png" alt="Laura Alves">
                     </div>
                     <div class="team-content">
                         <span class="role-badge">Diretoria</span>
@@ -224,13 +208,13 @@
                 <!-- Member 3: Yasmin -->
                 <div class="team-card">
                     <div class="team-img-wrapper">
-                        <img src="assets/yasmin.JPG" alt="Yasmin Lourenço">
+                        <img src="assets/yasmin.jpg" alt="Yasmin Lourenço">
                     </div>
                     <div class="team-content">
                         <span class="role-badge">Diretoria</span>
                         <h3>Yasmin Lourenço</h3>
                         <p class="role-desc"><i class="fa-solid fa-comments icon-role"></i> Diretora - Comunicação</p>
-                        <a href="http://lattes.cnpq.br/9576321317073336" target="_blank" rel="noopener noreferrer" class="lattes-link">
+                        <a href="http://lattes.cnpq.br/1367739652754076" target="_blank" rel="noopener noreferrer" class="lattes-link">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i> Currículo Lattes
                         </a>
                     </div>
@@ -260,30 +244,36 @@
                     <p>Conheça os membros e pesquisadores que fazem cada frente do BFC acontecer!</p>
                 </div>
 
-                <!-- Equipe 1: Pós-Graduandos & Pesquisadores -->
+                <!-- Equipe 1: Pós-Doutorandos -->
                 <div class="subteam-block">
                     <div class="subteam-header">
-                        <h3><i class="fa-solid fa-microscope icon-role"></i> Pós-Graduandos & Pesquisadores</h3>
-                        <p class="subteam-desc">Pesquisadores responsáveis pela orientação acadêmica, rigor científico e apoio à coordenação do projeto.</p>
+                        <h3><i class="fa-solid fa-microscope icon-role"></i> Apoio</h3>
+                        <p class="subteam-desc">Pesquisadores responsáveis pela orientação acadêmica, rigor científico e inovação nas pesquisas e ações do projeto.</p>
                     </div>
                     <div class="members-grid">
                         <div class="member-card">
-                            <img src="assets/neanderson.jpg" alt="Neanderson Galvão" class="member-avatar">
+                            <img src="assets/neanderson.jpeg" alt="Neanderson Galvão" class="member-avatar">
                             <h4>Neanderson Galvão</h4>
                             <p class="role-desc"><i class="fa-solid fa-user-graduate icon-role"></i> Vice-coordenador e Pós-doutorando</p>
-                            <a href="http://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
+                            <a href="http://lattes.cnpq.br/8465384988018097" target="_blank" rel="noopener noreferrer" class="lattes-link">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes
+                            </a>
                         </div>
                         <div class="member-card">
                             <img src="assets/larissa.jpg" alt="Larissa Paiva" class="member-avatar">
                             <h4>Larissa Paiva</h4>
                             <p class="role-desc"><i class="fa-solid fa-graduation-cap icon-role"></i> Pós-graduanda (Mestrado Profissional)</p>
-                            <a href="http://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
+                            <a href="http://lattes.cnpq.br/3160402131032554" target="_blank" rel="noopener noreferrer" class="lattes-link">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes
+                            </a>
                         </div>
                         <div class="member-card">
                             <img src="assets/jacqueline.jpg" alt="Jacqueline Elis" class="member-avatar">
                             <h4>Jacqueline Elis</h4>
                             <p class="role-desc"><i class="fa-solid fa-user-gear icon-role"></i> Pós-doutoranda</p>
-                            <a href="http://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
+                            <a href="http://lattes.cnpq.br/3822822734057151" target="_blank" rel="noopener noreferrer" class="lattes-link">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -298,27 +288,27 @@
                         <div class="member-card">
                             <img src="assets/catarina.jpg" alt="Catarina Paz" class="member-avatar">
                             <h4>Catarina Paz</h4>
-                            <a href="http://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
+                            <a href="http://lattes.cnpq.br/8576854469646743" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
                         </div>
                         <div class="member-card">
                             <img src="assets/ellen.jpg" alt="Ellen Alves" class="member-avatar">
                             <h4>Ellen Alves</h4>
-                            <a href="http://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
+                            <a href="http://lattes.cnpq.br/1406357648118251" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
                         </div>
                         <div class="member-card">
                             <img src="assets/manuella.jpg" alt="Manuella Verbicaro" class="member-avatar">
                             <h4>Manuella Verbicaro</h4>
-                            <a href="http://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
+                            <a href="http://lattes.cnpq.br/2766332496163222" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
                         </div>
                         <div class="member-card">
-                            <img src="assets/maria.jpg" alt="Maria Antônia Blanc" class="member-avatar">
+                            <img src="assets/maria.PNG" alt="Maria Antônia Blanc" class="member-avatar">
                             <h4>Maria Antônia Blanc</h4>
-                            <a href="http://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
+                            <a href="http://lattes.cnpq.br/1561046457728206" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
                         </div>
                         <div class="member-card">
-                            <img src="assets/pedro-majeski.jpg" alt="Pedro Henrique Majeski" class="member-avatar">
+                            <img src="assets/pedroh.jpg" alt="Pedro Henrique Majeski" class="member-avatar">
                             <h4>Pedro Henrique Majeski</h4>
-                            <a href="http://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
+                            <a href="http://lattes.cnpq.br/8161653600938462" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
                         </div>
                     </div>
                 </div>
@@ -331,9 +321,9 @@
                     </div>
                     <div class="members-grid">
                         <div class="member-card">
-                            <img src="assets/gabrielli.jpg" alt="Gabrielli Ayumi" class="member-avatar">
+                            <img src="assets/ayumi.jpg" alt="Gabrielli Ayumi" class="member-avatar">
                             <h4>Gabrielli Ayumi</h4>
-                            <a href="http://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
+                            <a href="http://lattes.cnpq.br/7011836460145440" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
                         </div>
                         <div class="member-card">
                             <img src="assets/lara.jpg" alt="Lara Salles" class="member-avatar">
@@ -346,9 +336,9 @@
                             <a href="http://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
                         </div>
                         <div class="member-card">
-                            <img src="assets/marcela.jpg" alt="Marcela Nóbrega" class="member-avatar">
+                            <img src="assets/marcela.png" alt="Marcela Nóbrega" class="member-avatar">
                             <h4>Marcela Nóbrega</h4>
-                            <a href="http://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
+                            <a href="http://lattes.cnpq.br/2924559784867330" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
                         </div>
                         <div class="member-card">
                             <img src="assets/sofia.jpg" alt="Sofia Ximenes" class="member-avatar">
@@ -356,9 +346,9 @@
                             <a href="http://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
                         </div>
                         <div class="member-card">
-                            <img src="assets/vitoria.jpg" alt="Vitória Accioly" class="member-avatar">
+                            <img src="assets/vitoria.png" alt="Vitória Accioly" class="member-avatar">
                             <h4>Vitória Accioly</h4>
-                            <a href="http://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
+                            <a href="http://lattes.cnpq.br/8126277409865797" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
                         </div>
                     </div>
                 </div>
@@ -367,33 +357,33 @@
                 <div class="subteam-block">
                     <div class="subteam-header">
                         <h3><i class="fa-solid fa-handshake icon-role"></i> Relações</h3>
-                        <p class="subteam-desc">Frente voltada para parcerias institucionais, articulação com escolas públicas e relacionamento com a comunidade.</p>
+                        <p class="subteam-desc">Frente voltada para parcerias institucionais, articulação com escolas públicas, relacionamento com a comunidade e gestão interna dos membros.</p>
                     </div>
                     <div class="members-grid">
                         <div class="member-card">
-                            <img src="assets/ana-julia.jpg" alt="Ana Júlia Almeida" class="member-avatar">
+                            <img src="assets/ana.jpg" alt="Ana Júlia Almeida" class="member-avatar">
                             <h4>Ana Júlia Almeida</h4>
-                            <a href="http://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
+                            <a href="http://lattes.cnpq.br/3561009269651029" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
                         </div>
                         <div class="member-card">
-                            <img src="assets/gustavo.jpg" alt="Gustavo Germano" class="member-avatar">
+                            <img src="assets/gustavo.png" alt="Gustavo Germano" class="member-avatar">
                             <h4>Gustavo Germano</h4>
-                            <a href="http://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
+                            <a href="http://lattes.cnpq.br/5492801706814500" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
                         </div>
                         <div class="member-card">
                             <img src="assets/helena.jpg" alt="Helena Gonçalves" class="member-avatar">
                             <h4>Helena Gonçalves</h4>
-                            <a href="http://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
+                            <a href="http://lattes.cnpq.br/1192713441791129" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
                         </div>
                         <div class="member-card">
-                            <img src="assets/pedro-pires.jpg" alt="Pedro Pires" class="member-avatar">
+                            <img src="assets/pedrop.jpg" alt="Pedro Pires" class="member-avatar">
                             <h4>Pedro Pires</h4>
-                            <a href="http://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
+                            <a href="http://lattes.cnpq.br/2475092262274798" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
                         </div>
                         <div class="member-card">
-                            <img src="assets/sara.jpg" alt="Sara Melo" class="member-avatar">
+                            <img src="assets/sara.png" alt="Sara Melo" class="member-avatar">
                             <h4>Sara Melo</h4>
-                            <a href="http://lattes.cnpq.br/" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
+                            <a href="http://lattes.cnpq.br/5368101490070262" target="_blank" rel="noopener noreferrer" class="lattes-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Lattes</a>
                         </div>
                     </div>
                 </div>
@@ -463,8 +453,8 @@
 
                 <div class="action-card">
                     <div class="action-badge"><i class="fa-solid fa-tree"></i> Parceria Casa da Ciência</div>
-                    <h3>Oficina de Férias</h3>
-                    <p>Evento realizado em parceria com a Casa da Ciência da UFRJ, em que propomos oficinas de tema ambiental para crianças de 4-12 anos.</p>
+                    <h3>Oficina de Férias e Poke...Ciência!</h3>
+                    <p>Evento realizado em parceria com a Casa da Ciência da UFRJ, em que propomos oficinas de tema ambiental para crianças de 4-12 anos e atividades temáticas de "Pokémon científico" para famílias.</p>
                 </div>
 
                 <div class="action-card">
@@ -501,24 +491,26 @@
                     <div class="ebook-img-wrapper">
                         <img src="assets/ebook.jpg" alt="Capa E-book Ciência na Prática">
                         
+                        <!-- Card ODS sobreposto no TOPO da capa -->
                         <div class="floating-card ebook-badge-float">
                             <i class="fa-solid fa-earth-americas"></i>
                             <span>Conexão com ODS</span>
                         </div>
                     </div>
                     <div class="isbn-badge">
-                        <i class="fa-solid fa-barcode"></i> ISBN: <span>978-65-00-00000-0</span>
+                        <i class="fa-solid fa-barcode"></i> ISBN: <span>978-65-02-30654-3</span>
                     </div>
                 </div>
 
                 <div class="ebook-info">
                     <span class="ebook-tag"><i class="fa-solid fa-book-open"></i> E-book Oficial</span>
-                    <h3 class="ebook-title">Ciência na Prática: Guia de Experimentos de Baixo Custo para Educação Científica</h3>
+                    <h3 class="ebook-title">Ciência na Prática: Guia de Experimentos de Baixo Custo para a Divulgação Científica</h3>
                     
                     <p class="ebook-description">
                         Este guia prático foi cuidadosamente elaborado para democratizar o ensino da ciência de forma acessível, segura e estimulante. O livro apresenta experimentos interativos desenvolvidos com materiais do cotidiano — perfeitos para serem realizados em sala de aula ou em casa:
                     </p>
 
+                    <!-- Lista de Experimentos Estruturada sem Espaços Grandes -->
                     <ul class="ebook-highlights">
                         <li>
                             <i class="fa-solid fa-dna"></i>
@@ -583,6 +575,7 @@
                                 <span class="exp-desc">Ação do fermento + açúcar vs. fermento + sal enchendo a bexiga.</span>
                             </div>
                         </li>
+                        <!-- Mudança 1: Adicionado o experimento Relógio de Iodo -->
                         <li>
                             <i class="fa-solid fa-clock"></i>
                             <div>
@@ -600,7 +593,7 @@
                     </ul>
 
                     <div class="ebook-actions">
-                        <a href="https://doi.org/10.5281/zenodo.10000000" target="_blank" rel="noopener noreferrer" class="btn-primary ebook-btn">
+                        <a href="https://zenodo.org/records/22045554" target="_blank" rel="noopener noreferrer" class="btn-primary ebook-btn">
                             <i class="fa-solid fa-graduation-cap"></i> Acessar no Zenodo (DOI)
                         </a>
                         <a href="https://www.amazon.com.br" target="_blank" rel="noopener noreferrer" class="btn-secondary ebook-btn">
@@ -647,7 +640,7 @@
                     <div class="material-num">03</div>
                     <div class="material-info">
                         <h3><i class="fa-solid fa-gamepad title-icon"></i> Recursos Interativos</h3>
-                        <p>Para consolidar o exposto nos Roteiros e Cartilhas, produzimos materiais interativos e didáticos sobre as atividades e conceitos científicos.</p>
+                        <p>Para consolidar o exposto nos Roteiros e Cartilhas, produzimos materiais interativos e didáticos sobre as atividades e conceitos científicos. Aqui, você também encontra vídeos, fotos e tutoriais da realização de experimentos e atividades.</p>
                     </div>
                     <a href="https://drive.google.com/drive/folders/19Eng3SlcKE6WDtepLfRa2MZf9mf55lLx?usp=drive_link" class="material-btn" target="_blank" rel="noopener noreferrer">
                         Acessar no Drive <i class="fa-solid fa-arrow-right"></i>
